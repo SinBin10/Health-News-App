@@ -11,7 +11,7 @@ const App = () => {
     }
     fetchnews();
   }, []);
-  return <h1>Hello World</h1>;
+  return <div className="h-full bg-slate-900"></div>;
 };
 
 export default App;
