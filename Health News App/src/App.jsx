@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 
 const App = () => {
+  const apiKey = import.meta.env.VITE_API_KEY;
   useEffect(() => {
     async function fetchnews() {
       let healthnews = await fetch(
-        "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=db1e1f1d48da48b091d78f01261dbf92"
+        `https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${apiKey}`
       );
       let final = await healthnews.json();
       console.log(final);
